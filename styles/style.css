@@ -10,6 +10,7 @@
     margin: 0;
     padding: 0;
     background-color: black;
+    color: white;
 }
 
 .page {
@@ -17,10 +18,68 @@
     margin: 0 auto;
 }
 
+/* HEADER */
+
 .header {
 
 }
 
 .header__logo {
-    color: #fff;
+    padding-top: 28px;
+    padding-left: 27px;
+}
+
+.header__line {
+    position: absolute;
+    min-width: 320px;
+    margin-top: 31.6px;
+    opacity: 0.7;
+    border: 1px solid #545454;
+}
+
+
+/* PROFILE */
+
+.Profile {
+    display: flex;
+    flex-direction: column;
+    padding: 42px 19px 32px;
+}
+
+.Profile__Avatar {
+    
+}
+
+.Profile__image {
+
+}
+
+.Profile__ellipse {
+
+}
+
+.Profile__info {
+
+}
+
+.Profile__name {
+
+}
+
+.Profile__edid_button {
+    background-color: black;
+    border: none;
+    cursor: pointer;
+}
+
+.Profile__profession {
+
+}
+
+.Profile__add_button {
+    background-color: black;
+    border: 2px solid #FFFFFF;
+    border-radius: 2px;
+    cursor: pointer;
+    padding: 17px 133px;
 }
