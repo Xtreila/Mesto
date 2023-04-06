@@ -107,7 +107,6 @@
 }
 
 .gallery__cards {
-    min-width: 282px;
     display: grid;
     justify-content: center;
     padding: 0;
@@ -116,11 +115,23 @@
 
 .gallery__card {
     list-style: none;
+    min-width: 282px;
 }
 
 .gallery__image {
     border-radius: 10px 10px 0px 0px;
 }
+
+.gallery__item {
+    background-color: #fff;
+    min-width: 246px;
+    display: flex;
+    border-radius: 0 0 10px 10px;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
 
 .gallery__text {
     font-style: normal;
@@ -135,12 +146,5 @@
     background-color: #FFFFFF;
     border: 2px solid #FFFFFF;
     cursor: pointer;
-    margin-right: 20px;
-}
-
-.gallery__item {
-    background-color: #fff;
-    display: flex;
-    border-radius: 0 0 10px 10px;
-    justify-content: space-between;
+    margin-right: 15px;
 }
