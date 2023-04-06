@@ -40,46 +40,63 @@
 
 /* PROFILE */
 
-.Profile {
+.profile {
     display: flex;
     flex-direction: column;
     padding: 42px 19px 32px;
+    align-items: center;
 }
 
-.Profile__Avatar {
-    
+.profile__Avatar {
 }
 
-.Profile__image {
-
+.profile__image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.Profile__ellipse {
+.profile__info {
 
+    width: 282px;
+    display: flex;
 }
 
-.Profile__info {
-
+.profile__name {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 27px;
+    line-height: 33px;
+    padding-left: 46px;
+    margin: 0;
 }
 
-.Profile__name {
-
-}
-
-.Profile__edid_button {
+.profile__edid_button {
     background-color: black;
     border: none;
     cursor: pointer;
+    padding-left: 10px;
 }
 
-.Profile__profession {
-
+.profile__profession {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    padding-top: 14px;
+    margin: 0;
+    text-align: end;
 }
 
-.Profile__add_button {
+.profile__add_button {
     background-color: black;
     border: 2px solid #FFFFFF;
     border-radius: 2px;
     cursor: pointer;
     padding: 17px 133px;
+    margin-top: 36px;
 }
