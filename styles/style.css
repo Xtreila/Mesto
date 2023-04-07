@@ -27,6 +27,7 @@
 .header__logo {
     padding-top: 28px;
     padding-left: 27px;
+    width: 103.74px;
 }
 
 .header__line {
@@ -103,19 +104,20 @@
 
 
 .gallery {
-    
+    padding-top: 16px;
 }
 
 .gallery__cards {
     display: grid;
     justify-content: center;
-    padding: 0;
+    padding: 0px;
     margin: 0;
 }
 
 .gallery__card {
     list-style: none;
     min-width: 282px;
+    padding-top: 20px;
 }
 
 .gallery__image {
@@ -147,4 +149,20 @@
     border: 2px solid #FFFFFF;
     cursor: pointer;
     margin-right: 15px;
+}
+
+
+.footer {
+    padding: 48px 19px 36px;
+}
+
+.footer__text {
+    margin: 0;
+    padding: 0;
+    width: 282px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #545454;
 }
