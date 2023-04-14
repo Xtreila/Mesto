@@ -18,12 +18,32 @@
     margin: 0 auto;
 }
 
+@media all and (min-width: 1280px) {
+    .page {
+        
+        padding: 0 200px;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .page {
+        /* padding: 0 150px; */
+    }
+}
+
+@media all and (min-width: 768px) {
+    .page {
+        /* padding: 0 100px; */
+    }
+}
+
 
 
 /* HEADER */
 
 .header {
-
+    display: flex;
+    flex-direction: column;
 }
 
 .header__logo {
@@ -32,12 +52,27 @@
     width: 103.74px;
 }
 
+@media all and (min-width: 1280px) {
+    .header__logo {
+        padding-top: 45px;
+        width: 142px;
+    }
+}
+
 .header__line {
-    position: absolute;
+    /* position: absolute; */
     min-width: 320px;
     margin-top: 31.6px;
     opacity: 0.7;
     border: 1px solid #545454;
+}
+
+@media all and (min-width: 1280px) {
+    .header__line {
+        min-width: 880px;
+        margin-top: 41px;
+
+    }
 }
 
 
@@ -50,6 +85,14 @@
     align-items: center;
 }
 
+@media all and (min-width: 768px) {
+    .profile {
+        flex-direction: row;
+    }
+}
+
+
+
 .profile__Avatar {
 }
 
@@ -61,8 +104,19 @@
 }
 
 .profile__info {
+    display: flex;
+    min-width: 282px;
+    display: flex;
+    flex-direction: column;
+}
 
-    width: 282px;
+@media all and (min-width: 1280px) {
+    .profile__info {
+        min-width: 336px;
+    }
+}
+
+.profile__main {
     display: flex;
 }
 
@@ -74,6 +128,12 @@
     line-height: 33px;
     padding-left: 46px;
     margin: 0;
+}
+
+@media all and (min-width: 1280px) {
+    .profile__name {
+        padding: 0;
+    }
 }
 
 .profile__edid_button {
@@ -92,7 +152,13 @@
     text-align: center;
     padding-top: 14px;
     margin: 0;
-    text-align: end;
+    /* text-align: end;*/
+}
+
+@media all and (min-width: 1280px) {
+    .profile__profession {
+        text-align: start;
+    }
 }
 
 .profile__add_button {
@@ -104,9 +170,27 @@
     margin-top: 36px;
 }
 
+@media all and (min-width: 1280px) {
+    .profile__add_button {
+        padding: 14px 64px;
+        
+    }
+}
+
+
+
+
+
+/* GALLETY */
 
 .gallery {
     padding-top: 16px;
+}
+
+@media all and (min-width: 1280px) {
+    .gallery {
+        padding-top: 36px;
+    }
 }
 
 .gallery__cards {
@@ -116,10 +200,30 @@
     margin: 0;
 }
 
+@media all and (min-width: 768px) {
+    .gallery__cards {
+        grid-template-columns: repeat(2, min-content);
+        grid-gap: 20px 17px;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .gallery__cards {
+        grid-template-columns: repeat(3, min-content);
+        grid-gap: 20px 17px;
+    }
+}
+
+
 .gallery__card {
     list-style: none;
     min-width: 282px;
-    padding-top: 20px;
+    /* padding-top: 20px; */
+}
+
+@media all and (min-width: 1280px) {
+    .gallery__card {
+    }
 }
 
 .gallery__image {
