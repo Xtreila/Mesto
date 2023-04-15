@@ -16,24 +16,31 @@
 .page {
     min-width: 320px;
     margin: 0 auto;
+    padding: 0;
 }
 
-@media all and (min-width: 1280px) {
+@media screen and (min-width: 1280px) {
     .page {
-        
-        padding: 0 200px;
+        /* padding: 0 200px; */
     }
 }
 
-@media all and (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
     .page {
-        /* padding: 0 150px; */
+        padding: 0 150px;
     }
 }
 
-@media all and (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .page {
         /* padding: 0 100px; */
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .page {
+        
+        /* padding: 0 19px; */
     }
 }
 
@@ -88,12 +95,26 @@
 @media all and (min-width: 768px) {
     .profile {
         flex-direction: row;
+        justify-content: space-between;
+        padding: 40px 0;
     }
 }
 
+.profile__cards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
 
+@media all and (min-width: 768px) {
+    .profile__cards {
+        flex-direction: row;
+    }
+}
 
 .profile__Avatar {
+    padding: 0;
+    margin: 0;
 }
 
 .profile__image {
@@ -113,6 +134,7 @@
 @media all and (min-width: 1280px) {
     .profile__info {
         min-width: 336px;
+        padding-left: 30px;
     }
 }
 
