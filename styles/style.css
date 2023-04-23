@@ -3,8 +3,8 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
-   -ms-text-size-adjust: 100%;
-   -moz-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
     text-rendering: optimizeLegibility;
     min-width: 100%;
     margin: 0;
@@ -19,32 +19,23 @@
     padding: 0;
 }
 
-@media screen and (min-width: 1280px) {
+@media all and (min-width: 768px) {
     .page {
-        /* padding: 0 200px; */
+        margin: 0 100px;
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media all and (min-width: 1128px) {
     .page {
-        padding: 0 150px;
+        margin: 0 150px;
     }
 }
 
-@media screen and (min-width: 768px) {
+@media all and (min-width: 1280px) {
     .page {
-        /* padding: 0 100px; */
+        margin: 0 200px;
     }
 }
-
-@media screen and (min-width: 768px) {
-    .page {
-        
-        /* padding: 0 19px; */
-    }
-}
-
-
 
 /* HEADER */
 
@@ -59,7 +50,7 @@
     width: 103.74px;
 }
 
-@media all and (min-width: 1280px) {
+@media all and (min-width: 1024px) {
     .header__logo {
         padding-top: 45px;
         width: 142px;
@@ -81,6 +72,93 @@
 
     }
 }
+
+.popup {
+    padding: 123px 19px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+
+.popup__content {
+    min-width: 282px;
+    box-sizing: border-box;
+    background: #FFFFFF;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    padding: 22px 25px;
+    color: #000000;
+    display: flex;
+    flex-direction: column;
+}
+
+.popup__title {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    margin: 0;
+    
+}
+
+.popup__form {
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 43px;
+}
+
+.popup__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.popup__line {
+    margin-top: 13px;
+    padding: 0;
+    opacity: 0.2;
+    border: 1px solid #000000;
+    width: 238px;
+    display: inline-block;
+}
+
+.popup__button {
+    margin-top: 45px;
+    padding: 14px 82px;
+    background: #000000;
+    border-radius: 2px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+/* popup  {position: fixed; z-index: 1;}, а у popup__container тоже {position: fixed; z-index: 2;}. */
+
+
+
+
+
+
+
+
+
 
 
 /* PROFILE */
@@ -177,6 +255,13 @@
     /* text-align: end;*/
 }
 
+@media all and (min-width: 768px) {
+    .profile__profession {
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
 @media all and (min-width: 1280px) {
     .profile__profession {
         text-align: start;
@@ -192,16 +277,12 @@
     margin-top: 36px;
 }
 
-@media all and (min-width: 1280px) {
+@media all and (min-width: 768px) {
     .profile__add_button {
         padding: 14px 64px;
-        
+
     }
 }
-
-
-
-
 
 /* GALLETY */
 
@@ -220,9 +301,10 @@
     justify-content: center;
     padding: 0px;
     margin: 0;
+    row-gap: 20px;
 }
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 600px) {
     .gallery__cards {
         grid-template-columns: repeat(2, min-content);
         grid-gap: 20px 17px;
@@ -236,16 +318,9 @@
     }
 }
 
-
 .gallery__card {
     list-style: none;
     min-width: 282px;
-    /* padding-top: 20px; */
-}
-
-@media all and (min-width: 1280px) {
-    .gallery__card {
-    }
 }
 
 .gallery__image {
@@ -259,9 +334,8 @@
     border-radius: 0 0 10px 10px;
     justify-content: space-between;
     align-items: center;
-    
-}
 
+}
 
 .gallery__text {
     font-style: normal;
@@ -279,9 +353,16 @@
     margin-right: 15px;
 }
 
+/* FOOTER */
 
 .footer {
     padding: 48px 19px 36px;
+}
+
+@media all and (min-width: 600px) {
+    .footer {
+        padding: 48px 0 36px;
+    }
 }
 
 .footer__text {
@@ -293,4 +374,11 @@
     font-size: 14px;
     line-height: 17px;
     color: #545454;
+}
+
+@media all and (min-width: 600px) {
+    .footer__text {
+        font-size: 18px;
+        line-height: 22px;
+    }
 }

@@ -11,26 +11,48 @@
 
 <body class="body">
     <div class="page">
+
+        <!-- HEADER -->
+
         <header class="header">
             <img class="header__logo" src="./pages/logo.svg" alt="logo">
             <div class="header__line"></div>
         </header>
 
-        
+        <!-- POPUP -->
+
+        <div class="popup">
+            <div class="popup__content">
+                <h2 class="popup__title">Редактировать профиль</h2>
+                <div class="popup__form">
+                    <p class="popup__text">Жак-Ив Кусто
+                        <span class="popup__line"></span>
+                    </p>
+                    <p class="popup__text">Исследователь океана
+                        <span class="popup__line"></span>
+                    </p>
+                </div>
+                <button class="popup__button">Сохранить</button>
+            </div>
+            
+        </div>
+
+        <!-- PROFILE -->
+
         <section class="profile">
             <div class="profile__cards">
-            <figure class="profile__Avatar">
-                <img class="profile__image" src="./images/Жак-Ив Кусто.jpg" alt="Жак-Ив Кусто">
-            </figure>
-            <div class="profile__info">
-            <div class="profile__main">
-                <h1 class="profile__name">Жак-Ив Кусто</h1>
-                <button class="profile__edid_button">
-                    <img src="./pages/Edit Button.svg" alt="Кнопка">
-                </button>
-            </div>
-            <h2 class="profile__profession">Исследователь океана</h2>
-            </div>
+                <figure class="profile__Avatar">
+                    <img class="profile__image" src="./images/Жак-Ив Кусто.jpg" alt="Жак-Ив Кусто">
+                </figure>
+                <div class="profile__info">
+                    <div class="profile__main">
+                        <h1 class="profile__name">Жак-Ив Кусто</h1>
+                        <button class="profile__edid_button">
+                            <img src="./pages/Edit Button.svg" alt="Кнопка">
+                        </button>
+                    </div>
+                    <h2 class="profile__profession">Исследователь океана</h2>
+                </div>
             </div>
 
             <button class="profile__add_button">
@@ -40,6 +62,7 @@
 
         </section>
 
+        <!-- GALLETY -->
 
         <section class="gallery">
             <ul class="gallery__cards">
@@ -99,6 +122,8 @@
                 </li>
             </ul>
         </section>
+
+        <!-- FOOTER -->
 
         <footer class="footer">
             <h3 class="footer__text">© 2020 Mesto Russia</h3>
