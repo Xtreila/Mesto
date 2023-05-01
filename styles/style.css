@@ -143,6 +143,10 @@
     }
 }
 
+.popup__close:hover {
+    opacity: 0.6;
+}
+
 
 
 .popup__title {
@@ -179,16 +183,27 @@
     margin: 0;
     padding: 0;
     display: inline-block;
+    border: none;
+    border-bottom: 1px solid #000000;
+    /* opacity: 0.2; */
+    padding-bottom: 13px;
+    min-width: 238px;
+    color: #000000;
 }
 
-.popup__line {
+.popup__text::placeholder {
+    color: #000000;
+}
+
+
+/* .popup__line {
     margin-top: 13px;
     padding: 0;
     opacity: 0.2;
     border: 1px solid #000000;
     min-width: 238px;
     display: block;
-}
+} */
 
 .popup__button {
     margin-top: 45px;
@@ -213,6 +228,11 @@
         line-height: 22px;
     }
 }
+
+.popup__button:hover {
+    opacity: 0.8;
+}
+
 
 
 /* popup  {position: fixed; z-index: 1;}, а у popup__container тоже {position: fixed; z-index: 2;}. */
@@ -341,6 +361,11 @@
 
     }
 }
+
+.profile__add_button:hover {
+    opacity: 0.6;
+}
+
 
 /* GALLETY */
 
