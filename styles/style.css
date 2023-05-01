@@ -69,23 +69,40 @@
     .header__line {
         min-width: 880px;
         margin-top: 41px;
-
     }
 }
 
+/* POPUP */
+
 .popup {
-    padding: 123px 19px 0;
+    /* 
+    padding: 0;
+    margin: 123px 19px 0;
+    z-index: 1; */
+    display: flex;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
+    height: 100%;
+    width: 100%;
     background-color: rgba(0, 0, 0, .5);
-    z-index: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+@media all and (min-width: 475px) {
+    .popup {
+        /* max-width: 430px;
+        max-height: 330px;
+        margin: 195px auto; */
+    }
 }
 
 .popup__content {
-    min-width: 282px;
+    max-width: 430px;
+    width: calc(100% - 44px);
     box-sizing: border-box;
     background: #FFFFFF;
     box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
@@ -94,7 +111,39 @@
     color: #000000;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
+
+@media all and (min-width: 520px) {
+    .popup__content {
+        width: calc(100% - 72px);
+        padding: 36px 34px;
+    }
+}
+
+.popup__close {
+    all:unset;
+    position: absolute;
+    top: -32px;
+    right: 0px;
+    width: 20px;
+    height: 20px;
+    background-image: url(../pages/Close\ Icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+
+@media all and (min-width: 520px) {
+    .popup__close {
+        width: 32px;
+        height: 32px;
+        top: -32px;
+        right: -32px;
+    }
+}
+
+
 
 .popup__title {
     font-family: 'Inter';
@@ -104,7 +153,14 @@
     line-height: 22px;
     text-align: center;
     margin: 0;
-    
+}
+
+@media all and (min-width: 475px) {
+    .popup__title {
+        font-size: 24px;
+        line-height: 29px;
+        text-align: start;
+    }
 }
 
 .popup__form {
@@ -130,8 +186,8 @@
     padding: 0;
     opacity: 0.2;
     border: 1px solid #000000;
-    width: 238px;
-    display: inline-block;
+    min-width: 238px;
+    display: block;
 }
 
 .popup__button {
@@ -149,15 +205,17 @@
     cursor: pointer;
 }
 
+@media all and (min-width: 475px) {
+    .popup__button {
+        margin-top: 48px;
+        padding: 14px auto 18px;
+        font-size: 18px;
+        line-height: 22px;
+    }
+}
+
+
 /* popup  {position: fixed; z-index: 1;}, а у popup__container тоже {position: fixed; z-index: 2;}. */
-
-
-
-
-
-
-
-
 
 
 
