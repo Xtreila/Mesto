@@ -187,12 +187,11 @@
     font-size: 14px;
     line-height: 17px;
     margin: 0;
-    padding: 0;
+    padding: 13px 3px;
     display: inline-block;
     border: none;
     border-bottom: 1px solid #000000;
     /* opacity: 0.2; */
-    padding-bottom: 13px;
     min-width: 238px;
     color: #000000;
 }
@@ -289,7 +288,6 @@
 .profile__info {
     display: flex;
     min-width: 282px;
-    display: flex;
     flex-direction: column;
 }
 
@@ -302,6 +300,7 @@
 
 .profile__main {
     display: flex;
+    /* position: relative; */
 }
 
 .profile__name {
@@ -310,21 +309,45 @@
     font-weight: 500;
     font-size: 27px;
     line-height: 33px;
-    padding-left: 46px;
+    text-align: center;
+    /* padding-left: 46px; */
     margin: 0;
+    padding: 0;
 }
 
 @media all and (min-width: 1280px) {
     .profile__name {
-        padding: 0;
+        min-width: 336px;
+        font-family: Inter;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 48px;
+        text-align: start;
     }
 }
 
 .profile__edid_button {
+    /* position: absolute;
+    top: 8px;
+    right: 19px; */
+    /* padding: 0; */
+    margin: 0;
     background-color: black;
     border: none;
     cursor: pointer;
     padding-left: 10px;
+}
+
+/* @media all and (min-width: 1280px) {
+    .profile__edid_button {
+        right: 0;
+        top: 15px;
+    }
+} */
+
+.profile__edit_element {
+    display: block;
 }
 
 .profile__profession {
@@ -336,13 +359,13 @@
     text-align: center;
     padding-top: 14px;
     margin: 0;
-    /* text-align: end;*/
 }
 
 @media all and (min-width: 768px) {
     .profile__profession {
         font-size: 18px;
         line-height: 22px;
+        /* padding-right: 18px; */
     }
 }
 
