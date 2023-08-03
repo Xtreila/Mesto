@@ -75,10 +75,6 @@
 /* POPUP */
 
 .popup {
-    /* 
-    padding: 0;
-    margin: 123px 19px 0;
-    z-index: 1; */
     display: none;
     position: fixed;
     top: 0;
@@ -90,21 +86,11 @@
     background-color: rgba(0, 0, 0, .5);
     align-items: center;
     justify-content: center;
-    /* opacity: 0;
-    visibility: hidden; */
 }
 
 .popup_opened {
     display: flex;
 }
-
-/* @media all and (min-width: 475px) {
-    .popup {
-        /* max-width: 430px;
-        max-height: 330px;
-        margin: 195px auto;
-    }
-} */
 
 .popup__content {
     max-width: 430px;
@@ -153,8 +139,6 @@
     opacity: 0.6;
 }
 
-
-
 .popup__title {
     font-family: 'Inter';
     font-style: normal;
@@ -191,7 +175,6 @@
     display: inline-block;
     border: none;
     border-bottom: 1px solid #000000;
-    /* opacity: 0.2; */
     min-width: 238px;
     color: #000000;
 }
@@ -199,16 +182,6 @@
 .popup__text::placeholder {
     color: #000000;
 }
-
-
-/* .popup__line {
-    margin-top: 13px;
-    padding: 0;
-    opacity: 0.2;
-    border: 1px solid #000000;
-    min-width: 238px;
-    display: block;
-} */
 
 .popup__button {
     margin-top: 45px;
@@ -279,12 +252,6 @@
     object-fit: cover;
 }
 
-.profile__info {
-    /* display: flex;
-    min-width: 282px;
-    flex-direction: column; */
-}
-
 @media all and (min-width: 1280px) {
     .profile__info {
         min-width: 336px;
@@ -297,7 +264,6 @@
     grid-template-areas: 
     'name button'
     'profession .';
-    /* grid-template-columns: 1fr 1px; */
 }
 
 .profile__name {
@@ -336,8 +302,6 @@
     }
 }
 
-
-
 .profile__edit_element {
     display: block;
 }
@@ -358,7 +322,6 @@
     .profile__profession {
         font-size: 18px;
         line-height: 22px;
-        /* padding-right: 18px; */
     }
 }
 
@@ -386,7 +349,6 @@
 .profile__add_button:hover {
     opacity: 0.6;
 }
-
 
 /* GALLETY */
 
@@ -433,15 +395,11 @@
     height: 282px;
 }
 
-
-
 .gallery__item {
     background-color: #fff;
     display: flex;
     border-radius: 0 0 10px 10px;
     width: 286px;
-    /* justify-content: space-between;
-    align-items: center; */
 }
 
 .gallety__items {
