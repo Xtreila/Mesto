@@ -238,12 +238,6 @@
     opacity: 0.8;
 }
 
-
-
-/* popup  {position: fixed; z-index: 1;}, а у popup__container тоже {position: fixed; z-index: 2;}. */
-
-
-
 /* PROFILE */
 
 .profile {
@@ -286,9 +280,9 @@
 }
 
 .profile__info {
-    display: flex;
+    /* display: flex;
     min-width: 282px;
-    flex-direction: column;
+    flex-direction: column; */
 }
 
 @media all and (min-width: 1280px) {
@@ -299,8 +293,11 @@
 }
 
 .profile__main {
-    display: flex;
-    /* position: relative; */
+    display: grid;
+    grid-template-areas: 
+    'name button'
+    'profession .';
+    /* grid-template-columns: 1fr 1px; */
 }
 
 .profile__name {
@@ -309,42 +306,37 @@
     font-weight: 500;
     font-size: 27px;
     line-height: 33px;
-    text-align: center;
-    /* padding-left: 46px; */
+    padding-left: 46px;
     margin: 0;
-    padding: 0;
+    grid-area: name;
 }
 
 @media all and (min-width: 1280px) {
     .profile__name {
-        min-width: 336px;
         font-family: Inter;
         font-size: 42px;
         font-style: normal;
         font-weight: 500;
         line-height: 48px;
-        text-align: start;
     }
 }
 
 .profile__edid_button {
-    /* position: absolute;
-    top: 8px;
-    right: 19px; */
-    /* padding: 0; */
     margin: 0;
     background-color: black;
     border: none;
     cursor: pointer;
     padding-left: 10px;
+    grid-area: button;
 }
 
-/* @media all and (min-width: 1280px) {
+@media all and (min-width: 1280px) {
     .profile__edid_button {
-        right: 0;
-        top: 15px;
+        padding-left: 18px;
     }
-} */
+}
+
+
 
 .profile__edit_element {
     display: block;
@@ -357,8 +349,9 @@
     font-size: 14px;
     line-height: 17px;
     text-align: center;
-    padding-top: 14px;
+    padding: 14px 0 0 46px;
     margin: 0;
+    grid-area: profession;
 }
 
 @media all and (min-width: 768px) {
@@ -387,7 +380,6 @@
 @media all and (min-width: 768px) {
     .profile__add_button {
         padding: 14px 64px;
-
     }
 }
 
