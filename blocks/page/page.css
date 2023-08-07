@@ -1,0 +1,23 @@
+.page {
+    min-width: 320px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+@media all and (min-width: 768px) {
+    .page {
+        margin: 0 100px;
+    }
+}
+
+@media all and (min-width: 1128px) {
+    .page {
+        margin: 0 150px;
+    }
+}
+
+@media all and (min-width: 1280px) {
+    .page {
+        margin: 0 200px;
+    }
+}

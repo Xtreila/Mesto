@@ -1,0 +1,13 @@
+.header__line {
+    min-width: 320px;
+    margin-top: 31.6px;
+    opacity: 0.7;
+    border: 1px solid #545454;
+}
+
+@media all and (min-width: 1280px) {
+    .header__line {
+        min-width: 880px;
+        margin-top: 41px;
+    }
+}

@@ -1,0 +1,6 @@
+.profile__main {
+    display: grid;
+    grid-template-areas: 
+    'name button'
+    'profession .';
+}

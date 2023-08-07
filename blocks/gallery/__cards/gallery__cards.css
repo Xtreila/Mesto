@@ -1,0 +1,21 @@
+.gallery__cards {
+    display: grid;
+    justify-content: center;
+    padding: 0px;
+    margin: 0;
+    row-gap: 20px;
+}
+
+@media all and (min-width: 600px) {
+    .gallery__cards {
+        grid-template-columns: repeat(2, min-content);
+        grid-gap: 20px 17px;
+    }
+}
+
+@media all and (min-width: 1024px) {
+    .gallery__cards {
+        grid-template-columns: repeat(3, min-content);
+        grid-gap: 20px 17px;
+    }
+}

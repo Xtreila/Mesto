@@ -1,0 +1,11 @@
+.profile__cards {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+@media all and (min-width: 768px) {
+    .profile__cards {
+        flex-direction: row;
+    }
+}

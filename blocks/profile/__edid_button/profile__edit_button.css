@@ -1,0 +1,14 @@
+.profile__edid_button {
+    margin: 0;
+    background-color: black;
+    border: none;
+    cursor: pointer;
+    padding-left: 10px;
+    grid-area: button;
+}
+
+@media all and (min-width: 1280px) {
+    .profile__edid_button {
+        padding-left: 18px;
+    }
+}

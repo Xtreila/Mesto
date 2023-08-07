@@ -1,0 +1,7 @@
+.gallety__items {
+    width: 246px;
+    margin: 25px 20px 32px 21px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+}

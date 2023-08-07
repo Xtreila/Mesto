@@ -1,0 +1,35 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media all and (min-width: 1280px) {
+    .profile__info {
+        min-width: 336px;
+        padding-left: 30px;
+    }
+}
