@@ -11,10 +11,10 @@
  - Открывание и закрывание pop-up;
  - Редактирование имени и информации о себе.
 
-**Бриф**
+**Фигма**
 
-- [Ссылка на макет в Брифе](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
+- [Ссылка на макет в Фигме](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
 
 **PROJECT**
 
-- [Ссылка на проект](https://arnodorian277.github.io/Russia-travel-s/)
+- [Ссылка на проект](https://xtreila.github.io/Mesto/)
