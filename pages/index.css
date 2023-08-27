@@ -23,10 +23,11 @@
 @import url('../blocks/profile/__image/profile__image.css');
 @import url('../blocks/profile/__main/profile__main.css');
 @import url('../blocks/profile/__name/profile__name.css');
-@import url('../blocks/profile/__edid_button/profile__edit_button.css');
-@import url('../blocks/profile/__edit_element/profile__edit_element.css');
+@import url('../blocks/profile/__edid-button/profile__edid_button.css');
+@import url('../blocks/profile/__edid-element/profile__edid-element.css');
 @import url('../blocks/profile/__profession/profile__profession.css');
-@import url('../blocks/profile/__add_button/profile__add_button.css');
+@import url('../blocks/profile/__add-button/profile__add-button.css');
+
 
 /* GALLERY */
 

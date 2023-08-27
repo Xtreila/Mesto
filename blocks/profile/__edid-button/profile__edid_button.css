@@ -1,4 +1,4 @@
-.profile__edid_button {
+.profile__edid-button {
     margin: 0;
     background-color: black;
     border: none;
@@ -8,7 +8,7 @@
 }
 
 @media all and (min-width: 1280px) {
-    .profile__edid_button {
+    .profile__edid-button {
         padding-left: 18px;
     }
 }
