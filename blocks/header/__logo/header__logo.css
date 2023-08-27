@@ -4,6 +4,12 @@
     width: 103.74px;
 }
 
+@media all and (min-width: 768px) {
+    .header__logo {
+        padding-left: 0px;
+    }
+}
+
 @media all and (min-width: 1024px) {
     .header__logo {
         padding-top: 45px;

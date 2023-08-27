@@ -10,6 +10,7 @@
 @media all and (min-width: 768px) {
     .profile__add_button {
         padding: 14px 64px;
+        margin: 0px;
     }
 }
 

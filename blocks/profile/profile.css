@@ -1,7 +1,7 @@
 .profile {
     display: flex;
     flex-direction: column;
-    padding: 42px 19px 32px;
+    padding: 42px 19px 0;
     align-items: center;
 }
 
@@ -9,6 +9,6 @@
     .profile {
         flex-direction: row;
         justify-content: space-between;
-        padding: 40px 0;
+        padding: 40px 0 0;
     }
 }

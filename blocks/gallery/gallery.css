@@ -1,9 +1,9 @@
 .gallery {
-    padding-top: 16px;
+    padding-top: 36px;
 }
 
-@media all and (min-width: 1280px) {
+@media all and (min-width: 768px) {
     .gallery {
-        padding-top: 36px;
+        padding-top: 76px;
     }
 }
