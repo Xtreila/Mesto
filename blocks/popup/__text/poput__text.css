@@ -9,10 +9,11 @@
     display: inline-block;
     border: none;
     border-bottom: 1px solid #000000;
-    min-width: 238px;
     color: #000000;
 }
-
+.popup__text:nth-child(2) {
+    margin-top: 30px;
+}
 .popup__text::placeholder {
     color: #000000;
 }
