@@ -36,7 +36,7 @@
 @import url('../blocks/gallery/__card/gallery__card.css');
 @import url('../blocks/gallery/__image/gallery__image.css');
 @import url('../blocks/gallery/__item/gallery__item.css');
-@import url('../blocks/gallery/items/gallery__items.css');
+@import url('../blocks/gallery/__inner/gallery__inner.css');
 @import url('../blocks/gallery/__text/gallery__text.css');
 @import url('../blocks/gallery/__like/gallery__like.css');
 
