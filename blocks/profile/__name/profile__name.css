@@ -4,9 +4,16 @@
     font-weight: 500;
     font-size: 27px;
     line-height: 33px;
-    padding-left: 46px;
+    /* padding-left: 46px; */
+    padding: 22px 0 0 46px;
     margin: 0;
     grid-area: name;
+}
+
+@media all and (min-width: 768px) {
+    .profile__name {
+        padding: 0 0 0 46px;
+    }
 }
 
 @media all and (min-width: 1280px) {
