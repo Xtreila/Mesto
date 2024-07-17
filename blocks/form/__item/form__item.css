@@ -1,0 +1,13 @@
+.form__item {
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    /* row-gap: 43px; */
+}
+
+
+@media all and (min-width: 520px) {
+    .form__item { 
+        padding-top: 54px;
+    }
+}

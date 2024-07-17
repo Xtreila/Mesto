@@ -1,0 +1,19 @@
+.form__text {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    margin: 0;
+    padding: 13px 3px;
+    display: inline-block;
+    border: none;
+    border-bottom: 1px solid #000000;
+    color: #000000;
+}
+.form__text:nth-child(2) {
+    margin-top: 30px;
+}
+.form__text::placeholder {
+    color: #000000;
+}
