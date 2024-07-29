@@ -40,6 +40,8 @@
 @import url('../blocks/gallery/__text/gallery__text.css');
 @import url('../blocks/gallery/__like/gallery__like.css');
 
+@import url('../blocks/gallery/__trash/gallery__trash.css');
+
 /* FOOTER */
 
 @import url('../blocks/footer/footer.css');

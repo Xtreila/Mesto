@@ -9,8 +9,7 @@ const addButtonElem = document.querySelector('.profile__add-button');
 const formElem = document.querySelector('.form');
 const formCloseElem = document.querySelector('.form__close');
 const formItem = document.querySelector('.form__item');
-const nameImage = document.querySelector('input[name="nameImage"]');
-const galleryName = document.querySelector('.gallery__text');
+
 
 
 const nameInput = document.querySelector('input[name="nameUser"]');
@@ -49,50 +48,31 @@ popupCloseElem.addEventListener('click', () => {
 
 // form
 function openForm (element) {
-    element.classList.add('form_opened');
+  element.classList.add('form_opened');
 }
 
 function closeForm (element) {
-    element.classList.remove('form_opened');
+  element.classList.remove('form_opened');
 }
 
 addButtonElem.addEventListener('click', () => {
-    openForm(formElem);
+  openForm(formElem);
 });
 
 formCloseElem.addEventListener('click', () => {
-    closeForm(formElem);
- });
-
-
- function getValueImages () {
-    nameImage.value = galleryName.textContent;
-    // jobInput.value = profileProfession.textContent;
-}
-
-function handleImagesSubmit (evt) {
-    evt.preventDefault(); 
-    galleryName.textContent = nameImage.value;
-    // profileProfession.textContent = jobInput.value;
-    closeForm(formElem);
-   }
-
-   // gallery__image
-
-
-
-
-
-
-
-
+  closeForm(formElem);
+});
 
 
 formElement.addEventListener('submit', handleFormSubmit);
-formItem.addEventListener('submit', handleImagesSubmit); 
 
 
-
+const nameImage = document.querySelector('input[name="nameImage"]')
+const linkImage = document.querySelector('input[name="linkImage"]')
+const galleryCards = document.querySelector('.gallery__cards')
+const galleryTemplate = document.querySelector('.gallery-template').content
+// const image = document.querySelector('.gallery__image')
+// console.log(image.alt)
 const initialCards = [
     {
       name: 'Архыз',
@@ -119,3 +99,101 @@ const initialCards = [
       link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
     }
   ];
+
+  
+  function renderCards(data) {
+
+    data.forEach(function (element) {
+      const initialCardsElement = galleryTemplate.cloneNode(true);
+      
+      initialCardsElement.querySelector('.gallery__text').textContent = element.name;
+      initialCardsElement.querySelector('.gallery__image').src = element.link;
+
+
+      initialCardsElement.querySelector('.gallery__like').addEventListener('click', function (evt) {
+        evt.target.classList.toggle('gallery__like_active');
+      })
+
+      galleryCards.prepend(initialCardsElement)
+      })
+  }
+
+
+  renderCards(initialCards)
+
+
+  function addCardsElem () { 
+        const newArray = []
+        newArray.push({
+          name: nameImage.value,
+          link: linkImage.value
+        })
+        console.log('massiv',initialCards)
+        renderCards(newArray)
+      }
+
+
+  function addCards() {
+    nameImage.value = initialCards.name
+    linkImage.value = initialCards.link
+  }
+  
+
+   const deleteCardsElem = document.querySelectorAll('.gallery__trash');
+   deleteCardsElem.forEach((elem) => {
+    elem.addEventListener('click', deleteCard);
+   });
+
+   function deleteCard(delCard) {
+    delCard = this.parentElement;
+    delCard.remove();
+   }
+
+
+      // deleteCardsElem.addEventListener('click', function (e) {
+      // const deleteCard = e.target.closest('.gallery__card');
+      // deleteCard.remove();
+      // });
+
+
+
+    //   let minus = document.querySelectorAll('.class');
+    //   minus.forEach((elem)=>{
+    //     elem.addEventListener('click',removeParent);
+    //   });
+    //   function removeParent(){
+    //     let revDiv = this.parentElement;
+    //     revDiv.remove();
+    // }
+
+
+
+
+
+  // deleteCardsElem.addEventListener('click', function () {
+  //     initialCards.splice(1, 0)
+  //    console.log(initialCards)
+  //    renderCards(initialCards)
+  //    console.log('dspjds', deleteCardsElem)
+  //     });
+
+  
+
+
+   
+
+
+ 
+  
+   function handleImagesSubmit (evt) {
+          evt.preventDefault(); 
+          addCardsElem()
+          // addCards()
+          // initialCards.name = nameImage.value;
+          // initialCards.link = linkImage.value
+        closeForm(formElem);
+        }
+
+  
+
+      formItem.addEventListener('submit', handleImagesSubmit);

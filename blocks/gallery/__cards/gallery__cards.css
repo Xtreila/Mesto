@@ -1,4 +1,5 @@
 .gallery__cards {
+    /* position: relative; */
     display: grid;
     justify-content: center;
     padding: 0px;
