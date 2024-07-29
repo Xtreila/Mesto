@@ -100,20 +100,19 @@ const initialCards = [
     }
   ];
 
+
+  
+
   
   function renderCards(data) {
 
     data.forEach(function (element) {
       const initialCardsElement = galleryTemplate.cloneNode(true);
-      
       initialCardsElement.querySelector('.gallery__text').textContent = element.name;
       initialCardsElement.querySelector('.gallery__image').src = element.link;
-
-
       initialCardsElement.querySelector('.gallery__like').addEventListener('click', function (evt) {
         evt.target.classList.toggle('gallery__like_active');
       })
-
       galleryCards.prepend(initialCardsElement)
       })
   }
@@ -154,20 +153,6 @@ const initialCards = [
       // const deleteCard = e.target.closest('.gallery__card');
       // deleteCard.remove();
       // });
-
-
-
-    //   let minus = document.querySelectorAll('.class');
-    //   minus.forEach((elem)=>{
-    //     elem.addEventListener('click',removeParent);
-    //   });
-    //   function removeParent(){
-    //     let revDiv = this.parentElement;
-    //     revDiv.remove();
-    // }
-
-
-
 
 
   // deleteCardsElem.addEventListener('click', function () {
