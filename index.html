@@ -26,7 +26,7 @@
             
             <div class="popup__content">
                 <button class="popup__close">
-                    <img src="./pages/Close_Icon.svg" alt="Крестик">
+                    <img src="./pages/Close_Icon.svg" alt="Крестик" class="image-popup__close-icon">
                 </button>
                 <h2 class="popup__title">Редактировать профиль</h2>
                 <form class="popup__form">
@@ -41,10 +41,9 @@
 
         <!-- FORM -->
         <div class="form">
-
             <div class="form__content">
                 <button class="form__close">
-                    <img src="./pages/Close_Icon.svg" alt="Крестик">
+                    <img src="./pages/Close_Icon.svg" alt="Крестик" class="image-popup__close-icon">
                 </button>
                 <h2 class="form__title">Новое место</h2>
                 <form class="form__item">
@@ -52,11 +51,21 @@
                     <input type="text" class="form__text" name="linkImage" placeholder="Ссылка на картинку">
                     <button type="submit" class="form__button">Создать</button>
                 </form>
-                
-                
-
             </div>
+        </div>
 
+        <!-- IMAGE-POPUP -->
+
+        <div class="image-popup">
+            <div class="image-popup__group">
+            <figure class="image-popup__content">
+                <button class="image-popup__close">
+                    <img src="./pages/Close_Icon.svg" alt="Крестик" class="image-popup__close-icon">
+                </button>
+                <img class="image-popup__image" src="" alt="" type="image" name="opImage">
+                <figcaption class=image-popup__text" type="text" name="desImage"></figcaption>
+            </figure>
+            </div>
         </div>
 
         <!-- PROFILE -->
@@ -164,7 +173,7 @@
         <template class="gallery-template">
             <li class="gallery__card">
                     <img class="gallery__image" src="" alt="">
-                    <button class="gallery__trash" id="">
+                    <button class="gallery__trash">
                         <img src="./images/svg/Trash.svg" alt="">
                     </button>
                     <div class="gallery__item">

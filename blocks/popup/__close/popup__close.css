@@ -2,20 +2,20 @@
     all:unset;
     position: absolute;
     top: -32px;
-    right: 0px;
-    width: 20px;
-    height: 20px;
+    right: -32px;
+    /* width: 20px;
+    height: 20px; */
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
 }
 
-@media all and (min-width: 520px) {
+@media all and (min-width: 768px) {
     .popup__close {
-        width: 32px;
-        height: 32px;
-        top: -32px;
-        right: -32px;
+        /* width: 32px;
+        height: 32px; */
+        top: -40px;
+        right: -40px;
     }
 }
 

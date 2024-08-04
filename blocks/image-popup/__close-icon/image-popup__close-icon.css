@@ -1,0 +1,9 @@
+.image-popup__close-icon {
+    width: 20px;
+}
+
+@media all and (min-width: 768px) {
+    .image-popup__close-icon {
+        width: 32px;
+    }
+}

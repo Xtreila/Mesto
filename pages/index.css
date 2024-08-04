@@ -58,7 +58,7 @@
 @import url('../blocks/popup/__text/poput__text.css');
 @import url('../blocks/popup/__button/popup__button.css');
 
-/* POPUP */
+/* POPUP-form */
 
 @import url('../blocks/form/form.css');
 @import url('../blocks/form/__opened/form__opened.css');
@@ -68,3 +68,14 @@
 @import url('../blocks/form/__item/form__item.css');
 @import url('../blocks/form/__text/form__text.css');
 @import url('../blocks/form/__button/form__button.css');
+
+/* IMAGE-POPUP */
+
+@import url('../blocks/image-popup/image-popup.css');
+@import url('../blocks/image-popup/__group/image-popup__group.css');
+@import url('../blocks/image-popup/__content/image-popup__content.css');
+@import url('../blocks/image-popup/__close/image-popup__close.css');
+@import url('../blocks/image-popup/__close-icon/image-popup__close-icon.css');
+@import url('../blocks/image-popup/__image/image-popup__image.css');
+@import url('../blocks/image-popup/__text/image-popup__text.css');
+@import url('../blocks/image-popup/__opened/image-popup__opened.css');

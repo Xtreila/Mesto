@@ -1,24 +1,20 @@
-.form__close {
+.image-popup__close {
     all:unset;
     position: absolute;
     top: -32px;
     right: -32px;
-    /* width: 20px; */
-    /* height: 20px; */
     background-repeat: no-repeat;
     background-position: center;
     cursor: pointer;
 }
 
-@media all and (min-width: 520px) {
-    .form__close {
-        /* width: 32px;
-        height: 32px; */
+ @media all and (min-width: 768px) {
+    .image-popup__close {
         top: -40px;
         right: -40px;
     }
 }
 
-.form__close:hover {
+.image-popup__close:hover {
     opacity: 0.6;
-}
+} 
