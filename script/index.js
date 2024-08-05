@@ -60,8 +60,7 @@ formCloseElem.addEventListener('click', () => {
 
 formElement.addEventListener('submit', handleFormSubmit);
 
-
-
+// cards
 
 const nameImage = document.querySelector('input[name="nameImage"]')
 const linkImage = document.querySelector('input[name="linkImage"]')
@@ -99,10 +98,6 @@ const initialCards = [
     delCard.remove();
     }
 
-
-    
-
-  
   function renderCards(data) {
     data.forEach(function (element) {
       const initialCardsElement = galleryTemplate.cloneNode(true);
@@ -111,11 +106,21 @@ const initialCards = [
       initialCardsElement.querySelector('.gallery__like').addEventListener('click', function (evt) {
         evt.target.classList.toggle('gallery__like_active');
       })
-
       const deleteCardsElem = initialCardsElement.querySelectorAll('.gallery__trash');
-     deleteCardsElem.forEach((elem) => {
-     elem.addEventListener('click', deleteCard);
+      deleteCardsElem.forEach((elem) => {
+      elem.addEventListener('click', deleteCard);
       });
+      const popupElemImages = document.querySelectorAll('.gallery__image');
+      popupElemImages.forEach(function (element) {
+        element.addEventListener('click', () => {
+          console.log(element)
+          console.log(popupImage)
+          openPopupImage(popupImage);
+        });
+        // element.addEventListener('click', () => {
+        //     closePopupImage(popupImage);
+        //   });
+        })
 
 
       galleryCards.prepend(initialCardsElement)
@@ -134,6 +139,8 @@ const initialCards = [
         renderCards(newArray)
       }
 
+
+
   function addCards() {
     nameImage.value = initialCards.name
     linkImage.value = initialCards.link
@@ -147,45 +154,58 @@ const initialCards = [
         }
    formItem.addEventListener('submit', handleImagesSubmit);
 
-   const popupElemImage = document.querySelector('.gallery__image');
+  //  const popupElemImage = document.querySelectorAll('.gallery__image');
    const popupCloseImage = document.querySelector('.image-popup__close');
    const popupImage = document.querySelector('.image-popup');
-  //  const desImage = document.querySelector('figcaption[name="desImage"]')
-  //  const opImage = document.querySelector('img[name="opImage"]')
+   const descriptionImage = document.querySelectorAll('figcaption[name="descriptionImage"]')
+   const imgOpenImage = document.querySelectorAll('img[name="imgOpenImage"]')
+   console.log(descriptionImage, imgOpenImage)
    
+    function openImage() {
+      descriptionImage.textContent = initialCards.name
+      imgOpenImage.src = initialCards.link
+     }
+
+
+    function openPopupImage (element) {
+    element.classList.add('image-popup__opened');
    
-  //  function openImage() {
-  //    desImage.value = initialCards.name
-  //    opImage.value = initialCards.link
-  //   }
-   
-  const desImage = document.querySelector('figcaption[name="desImage"]')
-  const opImage = document.querySelector('img[name="opImage"]')
-  console.log(desImage, opImage)
+     }
+    function closePopupImage (element) {
+    element.classList.remove('image-popup__opened')
+    }
 
-  //  function openImage() {
-  //        desImage.value = initialCards.name
-  //        opImage.value = initialCards.link
-  //       }
+      // popupElemImage.forEach(function (element) {
+      //   element.addEventListener('click', () => {
+      //     console.log(element)
+      //     console.log(popupImage)
+      //     openPopupImage(popupImage);
+      //   });
+      //   element.addEventListener('click', () => {
+      //       closePopupImage(popupImage);
+      //     });
+      //   })
 
 
 
-       function openPopupImage (element) {
-           element.classList.add('image-popup__opened');
-           console.log(element)
-       }
+
+
+
+      //  function openPopupImage (element) {
+      //      element.classList.add('image-popup__opened');
+      //      console.log(element)
+      //  }
        
    
-       function closePopupImage (element) {
-           element.classList.remove('image-popup__opened')
-       }
+      //  function closePopupImage (element) {
+      //      element.classList.remove('image-popup__opened')
+      //  }
    
-       popupElemImage.addEventListener('click', () => {
-        openPopupImage(popupImage);
-      });
+    //    popupElemImage.addEventListener('click', () => {
+    //     openPopupImage(popupImage);
+    //   });
      
-     popupCloseImage.addEventListener('click', () => {
-         closePopupImage(popupImage);
-      });
-   
-
+    //  popupCloseImage.addEventListener('click', () => {
+    //      closePopupImage(popupImage);
+    //   });
+ 
