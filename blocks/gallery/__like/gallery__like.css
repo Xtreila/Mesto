@@ -11,6 +11,5 @@
 }
 
  .gallery__like_active {
-    background-color: #000000;
-    color: #000000;
+    background-image: url(../../../images/svg/like_active.svg);
  }

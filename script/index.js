@@ -1,4 +1,3 @@
-// popup
 const editButtonElem = document.querySelector('.profile__edid-button'); 
 const popupElem = document.querySelector('.popup');
 const popupCloseElem = document.querySelector('.popup__close');
@@ -7,6 +6,25 @@ const nameInput = document.querySelector('input[name="nameUser"]');
 const jobInput = document.querySelector('input[name="jobUser"]');
 const profileName = document.querySelector('.profile__name');
 const profileProfession = document.querySelector('.profile__profession');
+// переменные отвечающие за вызов попапа с формой изменения имени и профессии
+const addButtonElem = document.querySelector('.profile__add-button');
+const formElem = document.querySelector('.form');
+const formCloseElem = document.querySelector('.form__close');
+const formItem = document.querySelector('.form__item');
+// переменные отвечающие за вызов массива карточек
+const nameImage = document.querySelector('input[name="nameImage"]')
+const linkImage = document.querySelector('input[name="linkImage"]')
+const galleryCards = document.querySelector('.gallery__cards')
+const galleryTemplate = document.querySelector('.gallery-template').content
+// переменные отвечающие за вызов попапа с формой добавления карточек
+// const popupCloseImage = document.querySelector('.image-popup__close');
+const popupImage = document.querySelector('.image-popup');
+// const descriptionImage = document.querySelectorAll('figcaption[name="descriptionImage"]')
+// const imgOpenImage = document.querySelectorAll('img[name="imgOpenImage"]')
+// переменные отвечающие за вызов модального окна карточки
+// console.log(descriptionImage, imgOpenImage)
+
+// функция открытия и закрытия попапа с формой изменения имени и профессии
 
 function openPopup (element) {
   element.classList.add('popup_opened');
@@ -36,11 +54,7 @@ popupCloseElem.addEventListener('click', () => {
   closePopup(popupElem);
 });
 
-// form 
-const addButtonElem = document.querySelector('.profile__add-button');
-const formElem = document.querySelector('.form');
-const formCloseElem = document.querySelector('.form__close');
-const formItem = document.querySelector('.form__item');
+// функции открытия и закрытия попапа с формой добавления карточек
 
 function openForm (element) {
   element.classList.add('form_opened');
@@ -60,12 +74,8 @@ formCloseElem.addEventListener('click', () => {
 
 formElement.addEventListener('submit', handleFormSubmit);
 
-// cards
+// Массив карточек
 
-const nameImage = document.querySelector('input[name="nameImage"]')
-const linkImage = document.querySelector('input[name="linkImage"]')
-const galleryCards = document.querySelector('.gallery__cards')
-const galleryTemplate = document.querySelector('.gallery-template').content
 const initialCards = [
     {
       name: 'Архыз',
@@ -93,10 +103,14 @@ const initialCards = [
     }
   ];
 
+  // функция удаления карточек
+
   function deleteCard(delCard) {
     delCard = this.parentElement;
     delCard.remove();
     }
+
+  // функция для обработки массива
 
   function renderCards(data) {
     data.forEach(function (element) {
@@ -110,24 +124,32 @@ const initialCards = [
       deleteCardsElem.forEach((elem) => {
       elem.addEventListener('click', deleteCard);
       });
-      const popupElemImages = document.querySelectorAll('.gallery__image');
-      popupElemImages.forEach(function (element) {
-        element.addEventListener('click', () => {
+      const popupElemImages = initialCardsElement.querySelectorAll('.gallery__image');
+
+      popupElemImages.forEach(function (el) {
+        el.addEventListener('click', () => {
+          console.log(el)
+          const descriptionImage = document.querySelectorAll('figcaption[name="descriptionImage"]').textContent = element.name;
+          const imgOpenImage = document.querySelectorAll('img[name="imgOpenImage"]').src = element.link
+          // el = element.link;
+          // el = element.name
           console.log(element)
-          console.log(popupImage)
+          // console.log(popupImage)
           openPopupImage(popupImage);
         });
-        // element.addEventListener('click', () => {
-        //     closePopupImage(popupImage);
-        //   });
-        })
-
+      
+      })
+      const popupCloseImage = document.querySelector('.image-popup__close').addEventListener('click', () => {
+        closePopupImage(popupImage);
+      });
 
       galleryCards.prepend(initialCardsElement)
       })
   }
 
   renderCards(initialCards)
+
+  // функции добавления карточек
 
   function addCardsElem () { 
         const newArray = []
@@ -155,18 +177,15 @@ const initialCards = [
    formItem.addEventListener('submit', handleImagesSubmit);
 
   //  const popupElemImage = document.querySelectorAll('.gallery__image');
-   const popupCloseImage = document.querySelector('.image-popup__close');
-   const popupImage = document.querySelector('.image-popup');
-   const descriptionImage = document.querySelectorAll('figcaption[name="descriptionImage"]')
-   const imgOpenImage = document.querySelectorAll('img[name="imgOpenImage"]')
-   console.log(descriptionImage, imgOpenImage)
+   
    
     function openImage() {
       descriptionImage.textContent = initialCards.name
       imgOpenImage.src = initialCards.link
      }
 
-
+     // функция открытия и закрытия модального окна карточек
+     
     function openPopupImage (element) {
     element.classList.add('image-popup__opened');
    
