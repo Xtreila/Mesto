@@ -178,7 +178,7 @@ const initialCards = [
 
   //  const popupElemImage = document.querySelectorAll('.gallery__image');
    
-   
+  //  
     function openImage() {
       descriptionImage.textContent = initialCards.name
       imgOpenImage.src = initialCards.link
