@@ -129,8 +129,8 @@ const initialCards = [
       popupElemImages.forEach(function (el) {
         el.addEventListener('click', () => {
           console.log(el)
-          const descriptionImage = document.querySelectorAll('figcaption[name="descriptionImage"]').textContent = element.name;
-          const imgOpenImage = document.querySelectorAll('img[name="imgOpenImage"]').src = element.link
+          const descriptionImage = document.querySelector('figcaption[name="descriptionImage"]').textContent = element.name;
+          const imgOpenImage = document.querySelector('img[name="imgOpenImage"]').src = element.link
           // el = element.link;
           // el = element.name
           console.log(element)

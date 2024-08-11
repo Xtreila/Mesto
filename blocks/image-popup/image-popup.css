@@ -1,5 +1,8 @@
 .image-popup {
-    display: none;
+    /* display: none; */
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s linear 300ms, opacity 300ms;
     position: fixed;
     z-index: 1;
     top: 0;
