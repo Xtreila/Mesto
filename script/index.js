@@ -1,3 +1,10 @@
+// const CLASSNAMES = {
+//   POPUP_OPENED:'popup_opened',
+// }
+
+// console.log(CLASSNAMES.POPUP_OPENED)
+const CLASS_POPUP = 'popup_opened'
+
 const editButtonElem = document.querySelector('.profile__edid-button'); 
 const popupElem = document.querySelector('.popup');
 const popupCloseElem = document.querySelector('.popup__close');
